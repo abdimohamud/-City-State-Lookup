@@ -1,0 +1,186 @@
+html {
+  box-sizing: border-box;
+  background: #3bc1ac;
+  font-family: "helvetica neue";
+  font-size: 20px;
+  font-weight: 200;
+  background-image: -webkit-radial-gradient(
+      100% 150% circle,
+      #3bc1ac 24%,
+      #42d2bb 25%,
+      #42d2bb 28%,
+      #3bc1ac 29%,
+      #3bc1ac 36%,
+      #42d2bb 36%,
+      #42d2bb 40%,
+      transparent 40%,
+      transparent
+    ),
+    -webkit-radial-gradient(0 150% circle, #3bc1ac 24%, #42d2bb 25%, #42d2bb 28%, #3bc1ac
+          29%, #3bc1ac 36%, #42d2bb 36%, #42d2bb 40%, transparent 40%, transparent),
+    -webkit-radial-gradient(50% 100% circle, #42d2bb 10%, #3bc1ac 11%, #3bc1ac
+          23%, #42d2bb 24%, #42d2bb 30%, #3bc1ac 31%, #3bc1ac 43%, #42d2bb 44%, #42d2bb
+          50%, #3bc1ac 51%, #3bc1ac 63%, #42d2bb 64%, #42d2bb 71%, transparent
+          71%, transparent),
+    -webkit-radial-gradient(100% 50% circle, #42d2bb 5%, #3bc1ac 6%, #3bc1ac 15%, #42d2bb
+          16%, #42d2bb 20%, #3bc1ac 21%, #3bc1ac 30%, #42d2bb 31%, #42d2bb 35%, #3bc1ac
+          36%, #3bc1ac 45%, #42d2bb 46%, #42d2bb 49%, transparent 50%, transparent),
+    -webkit-radial-gradient(0 50% circle, #42d2bb 5%, #3bc1ac 6%, #3bc1ac 15%, #42d2bb
+          16%, #42d2bb 20%, #3bc1ac 21%, #3bc1ac 30%, #42d2bb 31%, #42d2bb 35%, #3bc1ac
+          36%, #3bc1ac 45%, #42d2bb 46%, #42d2bb 49%, transparent 50%, transparent);
+  background-image: radial-gradient(
+      circle at 100% 150%,
+      #3bc1ac 24%,
+      #42d2bb 25%,
+      #42d2bb 28%,
+      #3bc1ac 29%,
+      #3bc1ac 36%,
+      #42d2bb 36%,
+      #42d2bb 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 150%,
+      #3bc1ac 24%,
+      #42d2bb 25%,
+      #42d2bb 28%,
+      #3bc1ac 29%,
+      #3bc1ac 36%,
+      #42d2bb 36%,
+      #42d2bb 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      #42d2bb 10%,
+      #3bc1ac 11%,
+      #3bc1ac 23%,
+      #42d2bb 24%,
+      #42d2bb 30%,
+      #3bc1ac 31%,
+      #3bc1ac 43%,
+      #42d2bb 44%,
+      #42d2bb 50%,
+      #3bc1ac 51%,
+      #3bc1ac 63%,
+      #42d2bb 64%,
+      #42d2bb 71%,
+      transparent 71%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      #42d2bb 5%,
+      #3bc1ac 6%,
+      #3bc1ac 15%,
+      #42d2bb 16%,
+      #42d2bb 20%,
+      #3bc1ac 21%,
+      #3bc1ac 30%,
+      #42d2bb 31%,
+      #42d2bb 35%,
+      #3bc1ac 36%,
+      #3bc1ac 45%,
+      #42d2bb 46%,
+      #42d2bb 49%,
+      transparent 50%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 50%,
+      #42d2bb 5%,
+      #3bc1ac 6%,
+      #3bc1ac 15%,
+      #42d2bb 16%,
+      #42d2bb 20%,
+      #3bc1ac 21%,
+      #3bc1ac 30%,
+      #42d2bb 31%,
+      #42d2bb 35%,
+      #3bc1ac 36%,
+      #3bc1ac 45%,
+      #42d2bb 46%,
+      #42d2bb 49%,
+      transparent 50%,
+      transparent
+    );
+  background-size: 100px 50px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+input {
+  width: 100%;
+  padding: 20px;
+}
+
+.search-form {
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+input.search {
+  margin: 0;
+  text-align: center;
+  outline: 0;
+  border: 10px solid #f7f7f7;
+
+  position: relative;
+  top: 10px;
+  z-index: 2;
+  border-radius: 5px;
+  font-size: 40px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+}
+
+.suggestions {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  /*perspective: 20px;*/
+}
+
+.suggestions li {
+  width: 600px;
+  background: white;
+  list-style: none;
+  border-bottom: 1px solid #d8d8d8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.14);
+  margin: 0;
+  padding: 20px;
+  transition: background 0.2s;
+  display: flex;
+  /* flex-direction: column;
+  text-align: center; */
+  align-items: center;
+  justify-content: space-evenly;
+  text-transform: capitalize;
+}
+
+/* .suggestions li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+}
+
+.suggestions li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
+} */
+
+span.population {
+  font-size: 15px;
+}
+
+.hl {
+  background: #ffc600;
+}
+
+a {
+  text-decoration: none;
+}
